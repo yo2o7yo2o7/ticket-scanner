@@ -139,7 +139,7 @@ export default function Scanner() {
       </div>
 
       {result && (
-        <div style={statusBox}>
+       <div style={{ ...statusBox, color: "#111827" }}>
           <div style={{ fontWeight: 700 }}>
             {result.type === "ok" && "Redeemed"}
             {result.type === "used" && "Already Used"}
@@ -148,7 +148,7 @@ export default function Scanner() {
           </div>
           <div style={{ marginTop: 6 }}>{result.message}</div>
           {result.ticket && (
-            <div style={{ marginTop: 10, fontSize: 12, color: "#6b7280" }}>
+            <div style={{ marginTop: 10, fontSize: 12, color: "#111827" }}>
               Name: {result.ticket.name || "-"} • Email: {result.ticket.email || "-"}
             </div>
           )}
